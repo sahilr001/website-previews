@@ -85,6 +85,17 @@ button { font: inherit; }
 .principle-strip div:last-child { border-right: 0; }
 .principle-strip strong { font-size: 1.3rem; }
 .principle-strip span { color: #68717a; font-size: .77rem; }
+.leader-card { display: grid; grid-template-columns: 1fr .82fr; margin-top: 78px; background: var(--white); }
+.leader-copy { min-height: 620px; padding: 72px clamp(45px, 6vw, 92px); display: flex; flex-direction: column; justify-content: center; }
+.leader-copy .eyebrow { color: var(--blue); }
+.leader-quote { margin: 0 0 34px; color: var(--blue-dark); font-family: "DM Serif Display", Georgia, serif; font-size: clamp(5rem, 8vw, 9rem); line-height: .88; letter-spacing: -.045em; }
+.leader-story { max-width: 590px; margin: 0; color: #52606b; font-size: 1.08rem; }
+.leader-signoff { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; align-items: baseline; justify-content: space-between; gap: 25px; }
+.leader-signoff span { font-size: 1.25rem; font-weight: 680; }
+.leader-signoff small { color: var(--blue); font-size: .67rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+.leader-photo { min-height: 620px; margin: 0; overflow: hidden; background: var(--sand); }
+.leader-photo img { height: 100%; object-fit: cover; object-position: 50% 32%; transition: transform .8s cubic-bezier(.2,.75,.2,1); }
+.leader-card:hover .leader-photo img { transform: scale(1.025); }
 
 .expertise { background: var(--blue-dark); color: var(--white); }
 .section-heading { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 58px; }
@@ -187,6 +198,9 @@ button { font: inherit; }
   .principle-strip { grid-template-columns: 1fr; }
   .principle-strip div, .principle-strip div:first-child { padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .principle-strip div:last-child { border-bottom: 0; }
+  .leader-card { grid-template-columns: 1fr 1fr; }
+  .leader-copy, .leader-photo { min-height: 540px; }
+  .leader-copy { padding: 55px 45px; }
   .expertise-row { grid-template-columns: 50px 1fr 1fr 28px; }
   .project-card-wide { grid-template-columns: 1fr; }
   .project-card-wide .project-info { min-height: 330px; }
@@ -212,6 +226,12 @@ button { font: inherit; }
   .intro-body { grid-template-columns: 1fr; gap: 25px; margin-top: 38px; }
   .principle-strip { margin-top: 60px; }
   .principle-strip span { font-size: .7rem; }
+  .leader-card { grid-template-columns: 1fr; margin-top: 55px; }
+  .leader-copy { min-height: 0; padding: 55px 30px; }
+  .leader-quote { font-size: clamp(4.5rem, 24vw, 7rem); }
+  .leader-story { font-size: .98rem; }
+  .leader-signoff { margin-top: 40px; }
+  .leader-photo { min-height: 500px; grid-row: 1; }
   .section-heading { display: block; }
   .section-deck { margin-top: 35px; }
   .expertise-row { grid-template-columns: 38px 1fr 26px; gap: 16px; padding: 26px 0; }

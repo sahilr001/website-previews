@@ -1,1 +1,16 @@
-const h=document.querySelector('[data-header]'),m=document.querySelector('.menu'),n=document.querySelector('#nav');addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>30),{passive:true});m.addEventListener('click',()=>{const o=n.classList.toggle('open');m.setAttribute('aria-expanded',o)});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>n.classList.remove('open')));const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach((e,i)=>{e.style.transitionDelay=Math.min(i%4,3)*55+'ms';ob.observe(e)});document.querySelector('[data-form]').addEventListener('submit',e=>{e.preventDefault();const f=e.currentTarget,d=new FormData(f),subject=encodeURIComponent('Project inquiry from '+d.get('name')),body=encodeURIComponent('Name: '+d.get('name')+'\nEmail: '+d.get('email')+'\nPhone: '+(d.get('phone')||'Not provided')+'\n\nProject details:\n'+d.get('message'));location.href='mailto:'+f.dataset.email+'?subject='+subject+'&body='+body});
+const menu = document.querySelector('.menu');
+const nav = document.querySelector('#nav');
+menu?.addEventListener('click', () => {
+  const open = menu.getAttribute('aria-expanded') === 'true';
+  menu.setAttribute('aria-expanded', String(!open));
+  nav.classList.toggle('open', !open);
+});
+nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+  nav.classList.remove('open');
+  menu?.setAttribute('aria-expanded', 'false');
+}));
+const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+  if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+}), { threshold: .12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());

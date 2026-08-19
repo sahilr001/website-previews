@@ -1,0 +1,215 @@
+<title>Competitive Piping Systems, Inc.</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --bg:#141b22;
+    --bg2:#1c2731;
+    --line:#2b3946;
+    --ink:#eef2f5;
+    --ink-dim:#a9b7c2;
+    --accent:#c17a3f;
+    --accent-ink:#1a120a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--ink);font-family:"Segoe UI",Arial,Helvetica,sans-serif;line-height:1.5}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:96px 0 80px;
+    background:
+      repeating-linear-gradient(135deg, rgba(193,122,63,0.05) 0 2px, transparent 2px 34px),
+      linear-gradient(180deg, var(--bg2), var(--bg));
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:600;
+    margin-bottom:18px;
+  }
+  h1{
+    font-size:clamp(32px,5vw,54px);
+    line-height:1.08;
+    font-weight:700;
+    max-width:16ch;
+    margin-bottom:20px;
+    letter-spacing:-0.01em;
+  }
+  .value-prop{
+    font-size:19px;
+    color:var(--ink-dim);
+    max-width:52ch;
+    margin-bottom:34px;
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 26px;
+    border-radius:6px;
+    font-size:16px;
+    font-weight:600;
+    text-decoration:none;
+    transition:opacity .15s ease;
+  }
+  .btn:hover{opacity:.88}
+  .btn-primary{background:var(--accent);color:var(--accent-ink)}
+  .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+  /* SERVICES STRIP */
+  .services{
+    padding:44px 0;
+    border-bottom:1px solid var(--line);
+    background:var(--bg2);
+  }
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+  }
+  .service-item{
+    padding:18px 20px;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--bg);
+  }
+  .service-item .label{
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .service-item .name{font-size:16px;font-weight:600}
+
+  /* CONTACT */
+  .contact{padding:72px 0}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:48px;
+    align-items:start;
+  }
+  .contact h2{font-size:26px;margin-bottom:14px;font-weight:700}
+  .contact p.lead{color:var(--ink-dim);max-width:44ch;margin-bottom:26px}
+  .info-card{
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:28px;
+    background:var(--bg2);
+  }
+  .info-row{margin-bottom:18px}
+  .info-row:last-child{margin-bottom:0}
+  .info-row .k{
+    font-size:11px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--ink-dim);
+    margin-bottom:5px;
+  }
+  .info-row .v{font-size:17px;font-weight:600}
+  .info-row a.v{text-decoration:none}
+  .info-row a.v:hover{color:var(--accent)}
+
+  /* FOOTER */
+  footer{
+    padding:26px 0 34px;
+    border-top:1px solid var(--line);
+  }
+  footer p{font-size:13px;color:var(--ink-dim);max-width:70ch}
+
+  @media (max-width:760px){
+    .hero{padding:64px 0 52px}
+    .wrap{padding:0 20px}
+    .services-grid{grid-template-columns:repeat(2,1fr)}
+    .contact-grid{grid-template-columns:1fr;gap:32px}
+    .btn{width:100%;justify-content:center}
+    .cta-row{flex-direction:column;align-items:stretch}
+  }
+</style>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Mechanical Contracting &middot; Chicago, IL</span>
+    <h1>Competitive Piping Systems, Inc.</h1>
+    <p class="value-prop">A family-owned mechanical contracting company serving the Chicago land area for over 35 years.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+13123221900">Call (312) 322-1900</a>
+      <a class="btn btn-secondary" href="mailto:jfweiher@cpspiping.com">Email the Service Division</a>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="label">Division</div>
+        <div class="name">HVAC</div>
+      </div>
+      <div class="service-item">
+        <div class="label">Division</div>
+        <div class="name">Pipe Fitting</div>
+      </div>
+      <div class="service-item">
+        <div class="label">Division</div>
+        <div class="name">Service</div>
+      </div>
+      <div class="service-item">
+        <div class="label">Division</div>
+        <div class="name">Fire Protection</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Get in touch</h2>
+      <p class="lead">Reach the team directly by phone, or email the division that fits your project.</p>
+    </div>
+    <div class="info-card">
+      <div class="info-row">
+        <div class="k">Phone</div>
+        <a class="v" href="tel:+13123221900">(312) 322-1900</a>
+      </div>
+      <div class="info-row">
+        <div class="k">Address</div>
+        <div class="v">141 W. Jackson Blvd, Suite A-30<br>Chicago, IL 60604</div>
+      </div>
+      <div class="info-row">
+        <div class="k">Service Division</div>
+        <a class="v" href="mailto:jfweiher@cpspiping.com">jfweiher@cpspiping.com</a>
+      </div>
+      <div class="info-row">
+        <div class="k">HVAC Division</div>
+        <a class="v" href="mailto:tmuraski@cpspiping.com">tmuraski@cpspiping.com</a>
+      </div>
+      <div class="info-row">
+        <div class="k">Pipe Fitting Division</div>
+        <a class="v" href="mailto:sdoherty@cpspiping.com">sdoherty@cpspiping.com</a>
+      </div>
+      <div class="info-row">
+        <div class="k">Fire Protection Division</div>
+        <a class="v" href="mailto:jaweiher@cpspiping.com">jaweiher@cpspiping.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Preview built for Competitive Piping Systems, Inc. from information on their existing site &mdash; not affiliated with or endorsed by them.</p>
+  </div>
+</footer>

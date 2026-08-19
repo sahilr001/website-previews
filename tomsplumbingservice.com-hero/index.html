@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tom's Plumbing Inc. | Elgin, IL</title>
+<style>
+  :root{
+    --maroon:#7a1f2b;
+    --maroon-dark:#5c1620;
+    --ink:#1c1a19;
+    --paper:#faf6f2;
+    --line:#e6dcd5;
+    --muted:#6b6260;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .hero{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:stretch;
+    background:var(--maroon);
+    color:#fff;
+  }
+  .hero-text{
+    flex:1 1 420px;
+    padding:64px 48px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:18px;
+  }
+  .kicker{
+    font-family:Arial,Helvetica,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+    color:#e3b8bd;
+    font-weight:bold;
+  }
+  h1{
+    font-size:44px;
+    line-height:1.1;
+    font-weight:normal;
+  }
+  .tagline{
+    font-size:19px;
+    color:#f1e3e2;
+    max-width:480px;
+  }
+  .est{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    color:#e3b8bd;
+    letter-spacing:.5px;
+  }
+  .cta-row{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    align-items:center;
+  }
+  .btn{
+    font-family:Arial,Helvetica,sans-serif;
+    display:inline-block;
+    background:#fff;
+    color:var(--maroon-dark);
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:3px;
+    font-weight:bold;
+    font-size:16px;
+    letter-spacing:.3px;
+  }
+  .btn:hover{background:#f1e3e2}
+  .hero-photo{
+    flex:1 1 420px;
+    min-height:320px;
+    background:#000 center/cover no-repeat;
+    background-image:url('photo.jpg');
+  }
+  .strip{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    padding:22px 48px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    justify-content:center;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    color:var(--muted);
+  }
+  .strip span{white-space:nowrap}
+  .strip strong{color:var(--ink)}
+  main{
+    max-width:920px;
+    margin:0 auto;
+    padding:56px 48px 40px;
+  }
+  h2{
+    font-size:26px;
+    font-weight:normal;
+    color:var(--maroon-dark);
+    margin-bottom:20px;
+  }
+  .quote{
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink);
+    border-left:3px solid var(--maroon);
+    padding-left:20px;
+    margin-bottom:36px;
+  }
+  .contact-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:36px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:32px;
+  }
+  .contact-col{flex:1 1 220px}
+  .contact-col h3{
+    font-family:Arial,Helvetica,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:8px;
+  }
+  .contact-col p{font-size:16px}
+  .contact-col a{color:var(--maroon-dark);text-decoration:none;font-weight:bold}
+  .contact-col a:hover{text-decoration:underline}
+  .services{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:14px;
+    color:var(--muted);
+    margin-top:28px;
+    line-height:1.9;
+  }
+  footer{
+    text-align:center;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:12px;
+    color:var(--muted);
+    padding:28px 24px 40px;
+    max-width:640px;
+    margin:0 auto;
+  }
+  @media (max-width:600px){
+    .hero-text{padding:40px 24px}
+    h1{font-size:32px}
+    main{padding:40px 20px 24px}
+    .strip{padding:18px 20px}
+    .contact-grid{padding:24px}
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="kicker">Tom's Plumbing Inc. &middot; Elgin, IL</div>
+    <h1>Honest Plumbing Since 1986</h1>
+    <p class="tagline">Plumbing with Honesty and Integrity &mdash; customer loyalty &amp; satisfaction, guaranteed workmanship.</p>
+    <div class="est">Family owned &amp; operated, serving Elgin and the surrounding area</div>
+    <div class="cta-row">
+      <a class="btn" href="tel:+18476976444">Call (847) 697-6444</a>
+    </div>
+  </div>
+  <div class="hero-photo" role="img" aria-label="Mike and Tammy of Tom's Plumbing Inc. with their service van in Elgin, IL"></div>
+</section>
+
+<div class="strip">
+  <span><strong>Licensed, insured &amp; bonded</strong></span>
+  <span>Only licensed plumbers on staff</span>
+  <span>Repipe specialists</span>
+  <span>Mon&ndash;Fri 8am&ndash;4:30pm &middot; Sat 8am&ndash;2pm</span>
+</div>
+
+<main>
+  <h2>What they do</h2>
+  <p class="quote">"Our technicians aren't salesmen, they are craftsmen of their trade. We do exemplary work at competitive prices."</p>
+  <div class="services">
+    Water Heaters &nbsp;&bull;&nbsp; Water Lines &nbsp;&bull;&nbsp; Drain Cleaning &nbsp;&bull;&nbsp; Water Filters &nbsp;&bull;&nbsp; Gas &nbsp;&bull;&nbsp; Commercial &nbsp;&bull;&nbsp; Boilers &amp; Radiators &nbsp;&bull;&nbsp; Kitchens &nbsp;&bull;&nbsp; Bathrooms &nbsp;&bull;&nbsp; Laundry Rooms &nbsp;&bull;&nbsp; Flood Control &nbsp;&bull;&nbsp; Exterior
+  </div>
+
+  <h2 style="margin-top:44px">Get in touch</h2>
+  <div class="contact-grid">
+    <div class="contact-col">
+      <h3>Phone</h3>
+      <p><a href="tel:+18476976444">(847) 697-6444</a></p>
+    </div>
+    <div class="contact-col">
+      <h3>Address</h3>
+      <p>130 Tefft Ave.<br>Elgin, IL 60120</p>
+    </div>
+    <div class="contact-col">
+      <h3>Email</h3>
+      <p><a href="mailto:contact@tomsplumbingservice.com">contact@tomsplumbingservice.com</a></p>
+    </div>
+    <div class="contact-col">
+      <h3>Hours</h3>
+      <p>Mon&ndash;Fri: 8am&ndash;4:30pm<br>Saturday: 8am&ndash;2pm</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Preview built for Tom's Plumbing Inc. from information on their existing site &mdash; not affiliated with or endorsed by them.
+</footer>
+
+</body>
+</html>

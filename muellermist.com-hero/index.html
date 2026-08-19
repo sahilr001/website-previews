@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muellermist Irrigation Co</title>
+<style>
+  :root{
+    --accent:#0e5a63;
+    --accent-dark:#0a444b;
+    --ink:#1c2624;
+    --paper:#faf9f6;
+    --line:#e2ded3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  .hero{
+    display:flex;
+    min-height:92vh;
+  }
+  .hero-text{
+    flex:1 1 50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:6vw 5vw;
+    background:var(--accent);
+    color:#fff;
+  }
+  .hero-photo{
+    flex:1 1 50%;
+    background-image:url('photo.jpg');
+    background-size:cover;
+    background-position:center;
+    min-height:340px;
+  }
+  .eyebrow{
+    font-family:Arial,Helvetica,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:.78rem;
+    color:#bfe3df;
+    margin-bottom:1rem;
+  }
+  .biz-name{
+    font-size:clamp(2.1rem,4.2vw,3.4rem);
+    font-weight:700;
+    line-height:1.08;
+    margin-bottom:.9rem;
+  }
+  .value-prop{
+    font-size:clamp(1.05rem,1.6vw,1.3rem);
+    max-width:34rem;
+    color:#eef6f4;
+    margin-bottom:2rem;
+  }
+  .call-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.6rem;
+    align-self:flex-start;
+    background:#fff;
+    color:var(--accent-dark);
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:700;
+    font-size:1.05rem;
+    padding:.85rem 1.6rem;
+    border-radius:3px;
+    box-shadow:0 2px 6px rgba(0,0,0,.18);
+  }
+
+  .cred-strip{
+    background:#f1efe6;
+    border-bottom:1px solid var(--line);
+    padding:.8rem 5vw;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.82rem;
+    color:#5a5346;
+    text-align:center;
+  }
+  .cred-strip strong{color:var(--accent-dark);}
+
+  .contact{
+    padding:5vw;
+    display:flex;
+    flex-wrap:wrap;
+    gap:3rem;
+    justify-content:space-between;
+    align-items:flex-start;
+  }
+  .contact-info h2{
+    font-size:1.4rem;
+    margin-bottom:.7rem;
+    color:var(--accent-dark);
+  }
+  .contact-info p{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.98rem;
+    color:#3a3f3d;
+    margin-bottom:.3rem;
+  }
+  .cta-block{
+    display:flex;
+    flex-direction:column;
+    gap:.7rem;
+    min-width:220px;
+  }
+  .cta{
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:700;
+    font-size:.98rem;
+    text-align:center;
+    padding:.9rem 1.4rem;
+    border-radius:3px;
+  }
+  .cta.primary{background:var(--accent);color:#fff;}
+  .cta.secondary{border:1px solid var(--accent);color:var(--accent-dark);}
+
+  footer{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:.72rem;
+    color:#8a8578;
+    text-align:center;
+    padding:1.4rem 1rem 2rem;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:700px){
+    .hero{flex-direction:column;min-height:auto;}
+    .hero-photo{order:-1;min-height:220px;}
+    .hero-text{padding:8vw 6vw;}
+    .call-btn{align-self:stretch;justify-content:center;}
+    .contact{flex-direction:column;gap:2rem;}
+    .cta-block{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="eyebrow">Serving Chicagoland since 1928</div>
+      <h1 class="biz-name">Muellermist Irrigation Co</h1>
+      <p class="value-prop">Quick, professional, dependable, courteous service is our goal &mdash; residential, commercial, and athletic-field irrigation systems.</p>
+      <a class="call-btn" href="tel:7083448680">&#9742; Call (708) 344-8680</a>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Irrigation system watering a landscaped lawn"></div>
+  </section>
+
+  <div class="cred-strip">
+    <strong>CIC</strong> Certified Irrigation Contractor &nbsp;&middot;&nbsp; <strong>CID</strong> Certified Irrigation Designer &nbsp;&middot;&nbsp; EPA WaterSense Partner &nbsp;&middot;&nbsp; A-Rated BBB
+  </div>
+
+  <section class="contact">
+    <div class="contact-info">
+      <h2>Get in touch</h2>
+      <p>2612 S. 9th Ave, P.O. Box 6307</p>
+      <p>Broadview, IL 60155</p>
+      <p>Service: (708) 344-8680 &nbsp;&bull;&nbsp; Sales: (708) 450-9595</p>
+      <p>info@muellermist.com</p>
+      <p>Hours: Apr&ndash;Nov 7:30am&ndash;4pm &nbsp;&bull;&nbsp; Dec&ndash;Mar 8am&ndash;2pm</p>
+    </div>
+    <div class="cta-block">
+      <a class="cta primary" href="tel:7083448680">Call now</a>
+      <a class="cta secondary" href="mailto:info@muellermist.com">Get a quote</a>
+    </div>
+  </section>
+
+  <footer>
+    Preview built for Muellermist Irrigation Co from information on their existing site &mdash; not affiliated with or endorsed by them.
+  </footer>
+
+</body>
+</html>

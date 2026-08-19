@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fly Plumbing &amp; HVAC | Wheeling, IL</title>
+<style>
+  :root{
+    --navy:#0b2f3a;
+    --teal:#0e6e7c;
+    --teal-light:#17a5b8;
+    --amber:#e08e2c;
+    --ink:#152233;
+    --paper:#f5f8f8;
+    --line:#dde6e7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+  }
+  a{color:inherit;}
+
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(circle at 82% 12%, rgba(23,165,184,.35) 0%, rgba(23,165,184,0) 45%),
+      linear-gradient(160deg, var(--navy) 0%, #0d4550 55%, var(--teal) 100%);
+    color:#fff;
+  }
+  .hero-inner{
+    max-width:1100px;
+    margin:0 auto;
+    padding:76px 24px 64px;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-size:.82rem;
+    color:#bfe6ec;
+    margin-bottom:26px;
+  }
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--amber);}
+  h1{
+    font-size:clamp(2.2rem,5.2vw,3.6rem);
+    line-height:1.08;
+    font-weight:800;
+    max-width:18ch;
+    margin-bottom:18px;
+  }
+  .tagline{
+    font-size:clamp(1.05rem,2vw,1.3rem);
+    color:#dcf0f2;
+    max-width:42ch;
+    margin-bottom:8px;
+    font-weight:400;
+  }
+  .tagline.sub{
+    font-size:.98rem;
+    color:#a9cdd2;
+    margin-bottom:32px;
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--amber);
+    color:#241300;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1.05rem;
+    padding:15px 26px;
+    border-radius:6px;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:#ec9c3f;}
+  .btn.secondary{
+    background:transparent;
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,.5);
+  }
+  .btn.secondary:hover{background:rgba(255,255,255,.1);}
+
+  .strip{
+    background:var(--navy);
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .strip-inner{
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px 24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:26px;
+    justify-content:center;
+  }
+  .cred{
+    color:#d7ecef;
+    font-size:.9rem;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-weight:600;
+  }
+  .cred .mark{color:var(--amber);font-weight:900;}
+
+  .services{
+    max-width:1100px;
+    margin:0 auto;
+    padding:56px 24px 8px;
+  }
+  .services h2{
+    font-size:1.5rem;
+    margin-bottom:22px;
+    color:var(--navy);
+  }
+  .svc-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:14px;
+  }
+  .svc-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:18px 16px;
+    font-weight:600;
+    font-size:.96rem;
+    color:var(--ink);
+  }
+
+  .contact{
+    max-width:1100px;
+    margin:48px auto 0;
+    padding:0 24px 64px;
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:24px;
+  }
+  .contact-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:32px;
+  }
+  .contact-card h2{
+    font-size:1.4rem;
+    color:var(--navy);
+    margin-bottom:6px;
+  }
+  .contact-card .sub{color:#5b7076;font-size:.95rem;margin-bottom:22px;}
+  .contact-line{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin-bottom:14px;
+    font-size:1rem;
+  }
+  .contact-line .lbl{color:#849699;min-width:66px;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;padding-top:2px;}
+  .contact-card .call-btn{
+    display:inline-flex;
+    margin-top:14px;
+    background:var(--teal);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    padding:14px 24px;
+    border-radius:6px;
+  }
+  .contact-card.alt{
+    background:var(--navy);
+    color:#dcecee;
+  }
+  .contact-card.alt h2{color:#fff;}
+  .contact-card.alt a{color:#fff;text-decoration:underline;}
+
+  footer{
+    background:#fff;
+    border-top:1px solid var(--line);
+    padding:26px 24px;
+    text-align:center;
+    font-size:.82rem;
+    color:#849699;
+  }
+
+  @media (max-width:700px){
+    .contact{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="brand"><span class="dot"></span>FLY PLUMBING &amp; HVAC &mdash; WHEELING, IL</div>
+      <h1>Commercial Strength, Community Heart</h1>
+      <p class="tagline">Licensed &amp; trusted plumbing and HVAC, open 24 hours.</p>
+      <p class="tagline sub">&ldquo;When we look at our customers, we see our friends and family.&rdquo;</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+18478681444">Call (847) 868-1444</a>
+        <a class="btn secondary" href="mailto:services@flymechanical.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-inner">
+      <div class="cred"><span class="mark">&#10003;</span> Licensed &mdash; Lic. #055 043945</div>
+      <div class="cred"><span class="mark">&#10003;</span> Open 24 Hours</div>
+      <div class="cred"><span class="mark">&#10003;</span> Family-Owned &amp; Operated</div>
+      <div class="cred"><span class="mark">&#10003;</span> Wheeling Area Chamber of Commerce Member</div>
+    </div>
+  </div>
+
+  <section class="services">
+    <h2>Services</h2>
+    <div class="svc-grid">
+      <div class="svc-card">Emergency Plumbing</div>
+      <div class="svc-card">Water Heaters &amp; Tankless Systems</div>
+      <div class="svc-card">Sewer, Drain &amp; Hydro Jetting</div>
+      <div class="svc-card">Gas Line &amp; Leak Detection</div>
+      <div class="svc-card">HVAC Repair &amp; Installation</div>
+      <div class="svc-card">Duct &amp; Dryer Vent Cleaning</div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact-card">
+      <h2>Get In Touch</h2>
+      <div class="sub">Plumbing &amp; HVAC, serving the greater Chicago area.</div>
+      <div class="contact-line"><span class="lbl">Address</span><span>584 Chaddick Dr, Wheeling, IL 60090</span></div>
+      <div class="contact-line"><span class="lbl">Phone</span><span><a href="tel:+18478681444">(847) 868-1444</a></span></div>
+      <div class="contact-line"><span class="lbl">Email</span><span><a href="mailto:services@flymechanical.com">services@flymechanical.com</a></span></div>
+      <div class="contact-line"><span class="lbl">Hours</span><span>Open 24 Hours</span></div>
+      <a class="call-btn" href="tel:+18478681444">Call Now</a>
+    </div>
+    <div class="contact-card alt">
+      <h2>Why Fly Plumbing &amp; HVAC</h2>
+      <p style="margin-bottom:14px;">A family-owned and operated company &mdash; licensed and trusted for plumbing and HVAC work across Wheeling, Skokie, and Chicago.</p>
+      <p>&ldquo;Commercial strength, community heart.&rdquo;</p>
+    </div>
+  </section>
+
+  <footer>
+    Preview built for Fly Plumbing &amp; HVAC from information on their existing site &mdash; not affiliated with or endorsed by them.
+  </footer>
+
+</body>
+</html>

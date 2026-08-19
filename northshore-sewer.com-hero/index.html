@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Shore Sewer, Inc.</title>
+<style>
+  :root{
+    --ink:#12242b;
+    --paper:#f6f4ef;
+    --accent:#0e6f6f;
+    --accent-dark:#0a5555;
+    --line:#dcd7cb;
+    --muted:#5b6b6d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  /* HERO */
+  .hero{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:stretch;
+    background:#0d2b2b;
+    color:#f4f1e9;
+  }
+  .hero-text{
+    flex:1 1 460px;
+    padding:64px 56px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:18px;
+  }
+  .eyebrow{
+    font-family:Arial,Helvetica,sans-serif;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:#8fc9c4;
+  }
+  .hero-text h1{
+    font-size:44px;
+    line-height:1.12;
+    font-weight:700;
+    letter-spacing:.2px;
+  }
+  .hero-text p.tagline{
+    font-size:18px;
+    color:#d7d3c4;
+    max-width:44ch;
+  }
+  .call-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-top:8px;
+  }
+  .btn{
+    font-family:Arial,Helvetica,sans-serif;
+    font-weight:700;
+    font-size:15px;
+    padding:14px 26px;
+    border-radius:3px;
+    display:inline-block;
+  }
+  .btn-primary{
+    background:var(--accent);
+    color:#fff;
+  }
+  .btn-secondary{
+    border:1px solid #5b7a7a;
+    color:#eef2ef;
+  }
+  .hero-photo{
+    flex:1 1 420px;
+    min-height:320px;
+    background-image:url('photo.jpg');
+    background-size:cover;
+    background-position:right center;
+  }
+
+  /* CREDENTIAL STRIP */
+  .credential{
+    background:var(--accent-dark);
+    color:#eaf3f1;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:13px;
+    letter-spacing:.03em;
+    text-align:center;
+    padding:9px 16px;
+  }
+
+  /* SERVICES */
+  .services{
+    padding:52px 56px 44px;
+    max-width:1100px;
+    margin:0 auto;
+  }
+  .services h2{
+    font-size:22px;
+    margin-bottom:22px;
+    color:var(--ink);
+  }
+  .service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:10px 28px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:15px;
+    color:#33474a;
+  }
+  .service-grid li{
+    list-style:none;
+    padding:8px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  /* CONTACT */
+  .contact{
+    background:#eee9dd;
+    padding:48px 56px;
+    border-top:1px solid var(--line);
+  }
+  .contact-inner{
+    max-width:1100px;
+    margin:0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    gap:24px;
+  }
+  .contact-info{
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:15px;
+    color:var(--ink);
+  }
+  .contact-info .name{
+    font-family:Georgia,serif;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .contact-info div{margin-top:3px;color:var(--muted);}
+  .contact-info a{color:var(--accent-dark);font-weight:700;}
+
+  /* FOOTER */
+  footer{
+    text-align:center;
+    padding:18px 20px;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:11.5px;
+    color:#8a8f88;
+    background:var(--paper);
+  }
+
+  @media (max-width:700px){
+    .hero-text{padding:44px 26px;}
+    .hero-text h1{font-size:32px;}
+    .hero-photo{min-height:220px;}
+    .services{padding:36px 26px;}
+    .contact{padding:36px 26px;}
+    .contact-inner{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="eyebrow">Sewer &middot; Drainage &middot; Plumbing</div>
+      <h1>North Shore Sewer, Inc.</h1>
+      <p class="tagline">Sewer, drainage &amp; plumbing service throughout the Chicagoland area &mdash; fully insured and bonded, celebrating 75 years in business.</p>
+      <div class="call-row">
+        <a class="btn btn-primary" href="tel:7732678150">Call (773) 267-8150</a>
+        <a class="btn btn-secondary" href="tel:7736079442">Emergency: (773) 607-9442</a>
+      </div>
+    </div>
+    <div class="hero-photo" role="img" aria-label="North Shore Sewer technician working on a sewer line installation"></div>
+  </section>
+
+  <div class="credential">Licensed, Bonded &amp; Insured</div>
+
+  <section class="services">
+    <h2>What We Do</h2>
+    <ul class="service-grid">
+      <li>Flood Controls Installed &amp; Serviced</li>
+      <li>Emergency Service Available</li>
+      <li>New Water &amp; Sewer Service</li>
+      <li>Water Jet &amp; Power Rodding</li>
+      <li>Camera Sewer Lines</li>
+      <li>New Plumbing Work &amp; Repair</li>
+      <li>Catch Basins Cleaned &amp; Repaired</li>
+      <li>Ejector &amp; Sump Pumps</li>
+      <li>Grease Traps Cleaned</li>
+      <li>Small Excavations</li>
+      <li>Private Drain Program</li>
+      <li>Over 1,000 Flood Control Installations</li>
+    </ul>
+  </section>
+
+  <section class="contact">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="name">North Shore Sewer, Inc.</div>
+        <div>4263 N. Elston Ave, Chicago, IL 60618-1813</div>
+        <div><a href="tel:7732678150">(773) 267-8150</a> &nbsp;&middot;&nbsp; Emergency <a href="tel:7736079442">(773) 607-9442</a></div>
+        <div><a href="mailto:info@northshore-sewer.com">info@northshore-sewer.com</a></div>
+      </div>
+      <a class="btn btn-primary" href="tel:7732678150">Get a Quote</a>
+    </div>
+  </section>
+
+  <footer>
+    Preview built for North Shore Sewer, Inc. from information on their existing site &mdash; not affiliated with or endorsed by them.
+  </footer>
+
+</body>
+</html>

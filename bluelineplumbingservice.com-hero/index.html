@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Line Plumbing | Ocala, FL</title>
+<style>
+  :root{
+    --navy:#0d2b4e;
+    --blue:#1a56a8;
+    --blue-light:#3b7dd8;
+    --ink:#152233;
+    --paper:#f6f8fb;
+    --line:#e1e7f0;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+  }
+  a{color:inherit;}
+
+  .hero{
+    position:relative;
+    min-height:88vh;
+    display:flex;
+    align-items:flex-end;
+    background:linear-gradient(180deg, rgba(10,26,48,.55) 0%, rgba(10,26,48,.65) 55%, rgba(6,16,30,.92) 100%), url('photo.jpg') center 30%/cover no-repeat;
+  }
+  .hero-inner{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:64px 24px 56px;
+    color:#fff;
+  }
+  .brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    letter-spacing:.04em;
+    text-transform:uppercase;
+    font-size:.85rem;
+    color:#cfe0f7;
+    margin-bottom:28px;
+  }
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--blue-light);}
+  h1{
+    font-size:clamp(2.1rem,5vw,3.4rem);
+    line-height:1.08;
+    font-weight:800;
+    max-width:16ch;
+    margin-bottom:16px;
+    text-shadow:0 2px 12px rgba(0,0,0,.25);
+  }
+  .tagline{
+    font-size:clamp(1.05rem,2vw,1.3rem);
+    color:#e6edf7;
+    max-width:38ch;
+    margin-bottom:32px;
+    font-weight:400;
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--blue-light);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    font-size:1.05rem;
+    padding:15px 26px;
+    border-radius:6px;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:#2e6cc4;}
+  .btn.secondary{
+    background:transparent;
+    border:1.5px solid rgba(255,255,255,.55);
+  }
+  .btn.secondary:hover{background:rgba(255,255,255,.1);}
+
+  .strip{
+    background:var(--navy);
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .strip-inner{
+    max-width:1100px;
+    margin:0 auto;
+    padding:22px 24px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:28px;
+    justify-content:center;
+  }
+  .cred{
+    color:#dbe6f5;
+    font-size:.92rem;
+    display:flex;
+    align-items:center;
+    gap:9px;
+    font-weight:600;
+  }
+  .cred .mark{color:var(--blue-light);font-weight:900;}
+
+  .services{
+    max-width:1100px;
+    margin:0 auto;
+    padding:56px 24px 8px;
+  }
+  .services h2{
+    font-size:1.5rem;
+    margin-bottom:22px;
+    color:var(--navy);
+  }
+  .svc-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    gap:14px;
+  }
+  .svc-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:18px 16px;
+    font-weight:600;
+    font-size:.98rem;
+    color:var(--ink);
+  }
+
+  .contact{
+    max-width:1100px;
+    margin:48px auto 0;
+    padding:0 24px 64px;
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:24px;
+  }
+  .contact-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:32px;
+  }
+  .contact-card h2{
+    font-size:1.4rem;
+    color:var(--navy);
+    margin-bottom:6px;
+  }
+  .contact-card .sub{color:#5b6b80;font-size:.95rem;margin-bottom:22px;}
+  .contact-line{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+    margin-bottom:14px;
+    font-size:1rem;
+  }
+  .contact-line .lbl{color:#8695a8;min-width:66px;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;padding-top:2px;}
+  .contact-card .call-btn{
+    display:inline-flex;
+    margin-top:14px;
+    background:var(--blue);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    padding:14px 24px;
+    border-radius:6px;
+  }
+  .contact-card.alt{
+    background:var(--navy);
+    color:#e6edf7;
+  }
+  .contact-card.alt h2{color:#fff;}
+  .contact-card.alt .contact-line .lbl{color:#8fa3c2;}
+  .contact-card.alt a{color:#fff;text-decoration:underline;}
+
+  footer{
+    background:#fff;
+    border-top:1px solid var(--line);
+    padding:26px 24px;
+    text-align:center;
+    font-size:.82rem;
+    color:#8695a8;
+  }
+
+  @media (max-width:700px){
+    .contact{grid-template-columns:1fr;}
+    .hero{min-height:82vh;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="brand"><span class="dot"></span>BLUE LINE PLUMBING &mdash; OCALA, FL</div>
+      <h1>Reliable &amp; Trustworthy Plumbing Services</h1>
+      <p class="tagline">Serving our community is what we do.</p>
+      <div class="cta-row">
+        <a class="btn" href="tel:+13523558755">Call (352) 355-8755</a>
+        <a class="btn secondary" href="mailto:Bluelineplumbingservices.llc@gmail.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="strip-inner">
+      <div class="cred"><span class="mark">&#10003;</span> State-Certified Plumbing Contractor &mdash; Lic. #CFC143148</div>
+      <div class="cred"><span class="mark">&#10003;</span> Owner-Operated by Former Law Enforcement</div>
+      <div class="cred"><span class="mark">&#10003;</span> Police / Fire / Military Discounts</div>
+    </div>
+  </div>
+
+  <section class="services">
+    <h2>Services</h2>
+    <div class="svc-grid">
+      <div class="svc-card">Faucet Repair &amp; Replacement</div>
+      <div class="svc-card">Drain Cleaning</div>
+      <div class="svc-card">Repipes &amp; Remodels</div>
+      <div class="svc-card">Water Heater Replacement</div>
+      <div class="svc-card">Toilet Repair &amp; Replacement</div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact-card">
+      <h2>Get In Touch</h2>
+      <div class="sub">Residential &amp; commercial plumbing, Ocala FL.</div>
+      <div class="contact-line"><span class="lbl">Address</span><span>4545 SW 60th Ave #773876, Ocala, FL 34474</span></div>
+      <div class="contact-line"><span class="lbl">Phone</span><span><a href="tel:+13523558755">(352) 355-8755</a></span></div>
+      <div class="contact-line"><span class="lbl">Email</span><span><a href="mailto:Bluelineplumbingservices.llc@gmail.com">Bluelineplumbingservices.llc@gmail.com</a></span></div>
+      <a class="call-btn" href="tel:+13523558755">Call Now</a>
+    </div>
+    <div class="contact-card alt">
+      <h2>Why Blue Line</h2>
+      <p style="margin-bottom:14px;">Founded by two former law enforcement officers, Toby and John, who bring the same accountability to plumbing that they brought to their previous careers.</p>
+      <p>Customer service, quality work, and accountability on every job.</p>
+    </div>
+  </section>
+
+  <footer>
+    Preview built for Blue Line Plumbing from information on their existing site &mdash; not affiliated with or endorsed by them.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<title>Johns Plumbing, Inc.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root{
+    --ink:#161a1d;
+    --paper:#f6f4f0;
+    --panel:#1f2428;
+    --copper:#b3672b;
+    --copper-light:#d98a45;
+    --line:#2c3237;
+    --muted:#9aa3ab;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:Georgia,'Times New Roman',serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  a{color:inherit}
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(180deg,#14181b 0%,#1c2226 100%);
+    color:#f2efe9;
+    padding:3.2rem 6vw 2.6rem;
+    display:flex;
+    align-items:center;
+    gap:3.5rem;
+    flex-wrap:wrap;
+  }
+  .hero-text{flex:1 1 380px;min-width:280px}
+  .brand{
+    font-size:1rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--copper-light);
+    font-family:Georgia,serif;
+    margin-bottom:1.1rem;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem,4.4vw,3.2rem);
+    font-weight:700;
+    line-height:1.12;
+    margin-bottom:1rem;
+    letter-spacing:-.01em;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--copper-light);
+  }
+  .hero p.lede{
+    font-size:1.12rem;
+    color:#d6d1c8;
+    max-width:38ch;
+    margin-bottom:1.9rem;
+  }
+  .cta-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.55rem;
+    padding:.85rem 1.5rem;
+    border-radius:3px;
+    font-family:Georgia,serif;
+    font-size:1.05rem;
+    text-decoration:none;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:var(--copper);
+    color:#fff;
+  }
+  .btn-ghost{
+    border-color:#4a5158;
+    color:#e9e6df;
+  }
+  .est{font-size:.9rem;color:var(--muted);margin-top:1.1rem}
+
+  .hero-photo{
+    flex:0 1 300px;
+    min-width:220px;
+  }
+  .hero-photo figure{
+    border:1px solid #33393e;
+    background:var(--panel);
+    padding:.5rem;
+  }
+  .hero-photo img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .hero-photo figcaption{
+    font-size:.78rem;
+    color:var(--muted);
+    padding:.55rem .2rem .1rem;
+    letter-spacing:.02em;
+  }
+
+  /* CREDENTIAL STRIP */
+  .creds{
+    background:#eae5db;
+    border-top:1px solid #dcd5c8;
+    border-bottom:1px solid #dcd5c8;
+    padding:1.1rem 6vw;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem 2rem;
+    align-items:center;
+    justify-content:center;
+    font-size:.92rem;
+  }
+  .creds span{
+    color:#4a463e;
+    white-space:nowrap;
+  }
+  .creds strong{color:var(--ink);font-weight:700}
+  .dot{color:var(--copper);margin:0 .1rem}
+
+  /* CONTACT */
+  .contact{
+    padding:3.4rem 6vw 3.6rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:3rem;
+    justify-content:space-between;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .contact h2{
+    font-size:1.6rem;
+    margin-bottom:.6rem;
+  }
+  .contact .sub{color:#5b564c;max-width:42ch;margin-bottom:1.6rem;font-size:1rem}
+  .contact-block{flex:1 1 320px}
+  .info-list{list-style:none}
+  .info-list li{
+    padding:.6rem 0;
+    border-bottom:1px solid #e2ddd1;
+    font-size:1.05rem;
+    display:flex;
+    gap:.7rem;
+  }
+  .info-list li:first-child{padding-top:0}
+  .info-list .lbl{
+    color:var(--copper);
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    min-width:5.2rem;
+    padding-top:.2rem;
+  }
+  .contact-cta{
+    flex:1 1 260px;
+    background:var(--ink);
+    color:#f2efe9;
+    padding:2.1rem 2rem;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:1rem;
+  }
+  .contact-cta .big-phone{
+    font-size:1.9rem;
+    font-weight:700;
+    color:#fff;
+    text-decoration:none;
+    letter-spacing:.01em;
+  }
+  .contact-cta .note{color:var(--muted);font-size:.9rem}
+  .contact-cta .btn-primary{align-self:flex-start;margin-top:.3rem}
+
+  /* FOOTER */
+  footer{
+    background:#14181b;
+    color:#8b9298;
+    text-align:center;
+    padding:1.5rem 6vw;
+    font-family:Georgia,serif;
+    font-size:.82rem;
+    line-height:1.6;
+  }
+
+  @media (max-width:640px){
+    .hero{padding:2.2rem 6vw 2rem;gap:2rem}
+    .hero-photo{order:-1;flex:1 1 100%}
+    .hero-photo img{max-height:260px;object-fit:cover;width:100%}
+    .contact{padding:2.4rem 6vw}
+    .creds{justify-content:flex-start;text-align:left}
+    .contact-cta .big-phone{font-size:1.6rem}
+  }
+</style>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="brand">Johns Plumbing, Inc. &nbsp;&middot;&nbsp; Chicago, IL</div>
+    <h1>Full&#8209;service plumbing, <em>trusted since 1981.</em></h1>
+    <p class="lede">A full-service plumbing contractor serving the Chicagoland area for 40 years &mdash; new construction, remodeling, and maintenance for high rises across downtown Chicago.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="tel:+17732869030">Call (773) 286-9030</a>
+      <a class="btn btn-ghost" href="#contact">Contact Info</a>
+    </div>
+    <div class="est">24/7 emergency plumbing service</div>
+  </div>
+  <div class="hero-photo">
+    <figure>
+      <img src="photo.jpg" alt="Copper riser piping installed by Johns Plumbing" width="261" height="341">
+      <figcaption>Riser replacement work &mdash; from Johns Plumbing's project photos</figcaption>
+    </figure>
+  </div>
+</section>
+
+<div class="creds">
+  <span><strong>License #BC14248</strong> &mdash; City of Chicago Licensed Plumbing Contractor</span>
+  <span class="dot">&bull;</span>
+  <span>Local Union 130 U.A.</span>
+  <span class="dot">&bull;</span>
+  <span>ASSE</span>
+  <span class="dot">&bull;</span>
+  <span>Illinois PHCC</span>
+  <span class="dot">&bull;</span>
+  <span>West Suburban Assoc. of Plumbing Contractors</span>
+</div>
+
+<section class="contact" id="contact">
+  <div class="contact-block">
+    <h2>Get in touch</h2>
+    <p class="sub">Reach the head office directly by phone, or stop by during business hours.</p>
+    <ul class="info-list">
+      <li><span class="lbl">Office</span><span>3116 N Cicero Ave<br>Chicago, IL 60641</span></li>
+      <li><span class="lbl">Phone</span><span><a href="tel:+17732869030">(773) 286-9030</a></span></li>
+      <li><span class="lbl">Service</span><span>New construction, remodeling &amp; maintenance for residential and high-rise properties</span></li>
+      <li><span class="lbl">Hours</span><span>24/7 emergency plumbing service</span></li>
+    </ul>
+  </div>
+  <div class="contact-cta">
+    <div class="note">Call now for service</div>
+    <a class="big-phone" href="tel:+17732869030">(773) 286-9030</a>
+    <a class="btn btn-primary" href="tel:+17732869030">Call Johns Plumbing</a>
+  </div>
+</section>
+
+<footer>
+  Preview built for Johns Plumbing, Inc. from information on their existing site &mdash; not affiliated with or endorsed by them.
+</footer>

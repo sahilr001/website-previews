@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LGS Plumbing, Inc. | Crown Point, IN</title>
+<style>
+  :root{
+    --navy:#12233b;
+    --blue:#1d5fa8;
+    --blue-light:#2f7fd6;
+    --ink:#1b1f27;
+    --paper:#ffffff;
+    --line:#e4e8ee;
+    --muted:#5b6472;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.5;
+  }
+  a{color:inherit;}
+
+  /* HERO */
+  .hero{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    min-height:92vh;
+    background:var(--navy);
+  }
+  .hero-copy{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:8vh 6vw;
+    color:#f4f6f9;
+  }
+  .badge{
+    display:inline-block;
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:#9fc3ec;
+    border:1px solid rgba(159,195,236,.4);
+    border-radius:999px;
+    padding:.4em 1em;
+    width:fit-content;
+    margin-bottom:1.6em;
+  }
+  .hero h1{
+    font-size:clamp(2rem,4.2vw,3.1rem);
+    font-weight:800;
+    letter-spacing:-.02em;
+    line-height:1.08;
+    margin-bottom:.5em;
+  }
+  .hero h1 span{color:var(--blue-light);}
+  .hero p.value{
+    font-size:clamp(1rem,1.6vw,1.2rem);
+    color:#c7d2e0;
+    max-width:34em;
+    margin-bottom:2em;
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:.9em;align-items:center;}
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:.5em;
+    font-weight:700;
+    font-size:1rem;
+    padding:.95em 1.6em;
+    border-radius:8px;
+    text-decoration:none;
+    transition:transform .15s ease, background .15s ease;
+  }
+  .btn-primary{background:var(--blue-light);color:#fff;}
+  .btn-primary:hover{background:#4a91e0;transform:translateY(-1px);}
+  .btn-ghost{border:1px solid rgba(255,255,255,.35);color:#f4f6f9;}
+  .btn-ghost:hover{border-color:#fff;}
+  .hero-meta{
+    margin-top:2.4em;
+    font-size:.85rem;
+    color:#9aa8bc;
+  }
+
+  .hero-photo{
+    position:relative;
+    background-image:linear-gradient(180deg, rgba(18,35,59,.05) 0%, rgba(18,35,59,.55) 100%), url('photo.jpg');
+    background-size:cover;
+    background-position:center;
+    min-height:38vh;
+  }
+  .hero-photo .cap{
+    position:absolute;
+    left:0;right:0;bottom:0;
+    padding:1.4em 1.6em;
+    font-size:.8rem;
+    color:#e7ecf3;
+    background:linear-gradient(0deg, rgba(0,0,0,.55), transparent);
+  }
+
+  /* CREDENTIAL STRIP */
+  .strip{
+    background:var(--blue);
+    color:#fff;
+    padding:1.1em 6vw;
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.4em 2.6em;
+    justify-content:center;
+    text-align:center;
+    font-size:.92rem;
+    font-weight:600;
+    letter-spacing:.01em;
+  }
+  .strip .item{display:flex;align-items:center;gap:.55em;}
+  .strip .dot{width:6px;height:6px;border-radius:50%;background:#bcdcff;flex:none;}
+
+  /* SERVICES */
+  .services{
+    padding:5.5em 6vw;
+    max-width:1200px;
+    margin:0 auto;
+  }
+  .services h2{
+    font-size:clamp(1.5rem,2.4vw,2rem);
+    margin-bottom:.3em;
+    letter-spacing:-.01em;
+  }
+  .services .sub{color:var(--muted);margin-bottom:2em;max-width:40em;}
+  .cat-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.4em;
+  }
+  .cat{
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:1.6em;
+  }
+  .cat h3{
+    font-size:1.05rem;
+    margin-bottom:.6em;
+    color:var(--navy);
+  }
+  .cat p{color:var(--muted);font-size:.92rem;}
+
+  /* CONTACT */
+  .contact{
+    background:#f6f8fb;
+    padding:5.5em 6vw;
+    border-top:1px solid var(--line);
+  }
+  .contact-inner{
+    max-width:1200px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:3em;
+    align-items:start;
+  }
+  .contact h2{
+    font-size:clamp(1.5rem,2.4vw,2rem);
+    margin-bottom:.5em;
+    letter-spacing:-.01em;
+  }
+  .contact p.lead{color:var(--muted);max-width:32em;margin-bottom:1.8em;}
+  .contact .btn-primary{background:var(--blue);}
+  .contact .btn-primary:hover{background:var(--blue-light);}
+  .info-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:2em;
+  }
+  .info-card dl{display:grid;grid-template-columns:auto 1fr;gap:.7em 1em;font-size:.95rem;}
+  .info-card dt{color:var(--muted);font-weight:600;}
+  .info-card dd{color:var(--ink);}
+  .info-card hr{border:none;border-top:1px solid var(--line);margin:1.4em 0;}
+
+  /* FOOTER */
+  footer{
+    padding:2.2em 6vw;
+    text-align:center;
+    font-size:.78rem;
+    color:var(--muted);
+    background:var(--navy);
+  }
+  footer p{max-width:44em;margin:0 auto;color:#9aa8bc;}
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;min-height:auto;}
+    .hero-photo{min-height:42vh;order:-1;}
+    .hero-copy{padding:2.4em 6vw 3em;}
+    .cat-grid{grid-template-columns:1fr;}
+    .contact-inner{grid-template-columns:1fr;}
+    .strip{font-size:.85rem;gap:1em 1.6em;padding:1em 5vw;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="badge">Crown Point, IN &middot; Since 1983</span>
+      <h1>LGS <span>Plumbing</span>, Inc.</h1>
+      <p class="value">Since 1983, LGS Plumbing Inc. has been a family owned and operated leader in top-quality plumbing services for Crown Point and the surrounding areas &mdash; fair rates, no premium markup.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="tel:2196632177">Call (219) 663-2177</a>
+        <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+      </div>
+      <div class="hero-meta">Mon&ndash;Fri 7:00am&ndash;4:00pm &middot; Emergency Service 24/7/365</div>
+    </div>
+    <div class="hero-photo">
+      <div class="cap">LGS Plumbing crew installing a utility pit on a Crown Point site</div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="item"><span class="dot"></span>Family Owned &amp; Operated Since 1983</div>
+    <div class="item"><span class="dot"></span>Union Plumbers</div>
+    <div class="item"><span class="dot"></span>24/7/365 Emergency Service</div>
+    <div class="item"><span class="dot"></span>St. Jude House Community Partner</div>
+  </div>
+
+  <section class="services">
+    <h2>What We Do</h2>
+    <p class="sub">Full-service plumbing for residential and commercial properties across Crown Point, Merrillville, Winfield, Lake &amp; Porter County, and the south suburbs of Illinois.</p>
+    <div class="cat-grid">
+      <div class="cat">
+        <h3>Plumbing Services</h3>
+        <p>Drains, faucets, garbage disposals, gas lines, pipes, showers, sinks, toilets, water heaters, repairs, and new/old construction.</p>
+      </div>
+      <div class="cat">
+        <h3>Sewer &amp; Water</h3>
+        <p>Hydro jetting, sewer rodding, video inspection, backflow prevention, sump pumps &amp; battery backup, ejector pits &amp; pumps.</p>
+      </div>
+      <div class="cat">
+        <h3>Site Utilities</h3>
+        <p>Utility locates and underground site utility work for new and existing construction projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div>
+        <h2>Talk to LGS Plumbing</h2>
+        <p class="lead">Call, email, or stop by &mdash; the team is available weekdays 7:00am&ndash;4:00pm, with 24/7/365 emergency service.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="tel:2196632177">Call (219) 663-2177</a>
+          <a class="btn btn-ghost" style="border-color:#c7d0dc;color:var(--navy);" href="mailto:admin@lgsplumbing.com">Email admin@lgsplumbing.com</a>
+        </div>
+      </div>
+      <div class="info-card">
+        <dl>
+          <dt>Address</dt><dd>1110 E. Summit Street<br>Crown Point, IN 46307</dd>
+          <dt>Phone</dt><dd><a href="tel:2196632177">(219) 663-2177</a></dd>
+          <dt>Email</dt><dd><a href="mailto:admin@lgsplumbing.com">admin@lgsplumbing.com</a></dd>
+          <dt>Fax</dt><dd>(219) 662-2788</dd>
+        </dl>
+        <hr>
+        <dl>
+          <dt>Mon&ndash;Fri</dt><dd>7:00am &ndash; 4:00pm</dd>
+          <dt>Sat&ndash;Sun</dt><dd>Closed</dd>
+          <dt>Emergency</dt><dd>24/7/365</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Preview built for LGS Plumbing, Inc. from information on their existing site &mdash; not affiliated with or endorsed by them.</p>
+  </footer>
+
+</body>
+</html>

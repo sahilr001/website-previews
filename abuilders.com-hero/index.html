@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Associated Builders Inc.</title>
+<style>
+  :root{
+    --ink:#161c24;
+    --ink-soft:#425064;
+    --paper:#f6f4ef;
+    --panel:#ffffff;
+    --line:#e2ddd2;
+    --accent:#c1571f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{width:100%;overflow-x:hidden;}
+  body{
+    font-family:"Segoe UI",Arial,Helvetica,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.5;
+  }
+  a{color:inherit;text-decoration:none;}
+
+  .hero{
+    display:flex;
+    min-height:100vh;
+    flex-wrap:wrap;
+  }
+  .hero-text{
+    flex:1 1 480px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:6vw 6vw;
+    background:var(--ink);
+    color:#f2efe9;
+  }
+  .brand{
+    font-size:0.78rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--accent);
+    font-weight:700;
+    margin-bottom:1.4rem;
+  }
+  .hero-text h1{
+    font-size:clamp(2rem,4.4vw,3.1rem);
+    line-height:1.12;
+    font-weight:700;
+    margin-bottom:1rem;
+    letter-spacing:-0.01em;
+  }
+  .hero-text .sub{
+    font-size:clamp(1.02rem,1.6vw,1.2rem);
+    color:#cfd4dc;
+    max-width:34em;
+    margin-bottom:2.2rem;
+  }
+  .cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;}
+  .btn{
+    display:inline-block;
+    padding:0.9rem 1.7rem;
+    font-size:1rem;
+    font-weight:700;
+    border-radius:3px;
+    border:2px solid var(--accent);
+  }
+  .btn-solid{background:var(--accent);color:#fff;}
+  .btn-solid:hover{background:#a8481a;}
+  .btn-ghost{color:#f2efe9;border-color:#5a6473;}
+  .btn-ghost:hover{border-color:#f2efe9;}
+
+  .hero-photo{
+    flex:1 1 480px;
+    min-height:320px;
+    background-image:url('photo.jpg');
+    background-size:cover;
+    background-position:center;
+  }
+
+  .strip{
+    background:var(--panel);
+    border-bottom:1px solid var(--line);
+    padding:1.1rem 6vw;
+    display:flex;
+    flex-wrap:wrap;
+    gap:0.6rem 2.4rem;
+    justify-content:center;
+    font-size:0.86rem;
+    letter-spacing:0.03em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    font-weight:600;
+  }
+  .strip span{white-space:nowrap;}
+  .strip .dot{color:var(--accent);font-weight:700;}
+
+  .contact{
+    padding:5rem 6vw;
+    text-align:center;
+    max-width:760px;
+    margin:0 auto;
+  }
+  .contact h2{
+    font-size:clamp(1.5rem,2.6vw,2rem);
+    margin-bottom:0.8rem;
+  }
+  .contact p{
+    color:var(--ink-soft);
+    font-size:1.05rem;
+    margin-bottom:0.35rem;
+  }
+  .contact .addr{margin-bottom:2.2rem;}
+  .contact .btn{border-color:var(--ink);}
+  .contact .btn-solid{background:var(--ink);border-color:var(--ink);}
+  .contact .btn-solid:hover{background:#000;}
+  .contact .btn-ghost{color:var(--ink);border-color:#c8c2b4;}
+  .contact .btn-ghost:hover{border-color:var(--ink);}
+  .contact .cta-row{justify-content:center;}
+
+  footer{
+    padding:2rem 6vw 2.4rem;
+    text-align:center;
+    font-size:0.78rem;
+    color:#8b8577;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:700px){
+    .hero{flex-direction:column;}
+    .hero-photo{min-height:220px;order:-1;}
+    .hero-text{padding:2.6rem 6vw;}
+    .strip{font-size:0.74rem;gap:0.5rem 1.4rem;}
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-text">
+      <div class="brand">Associated Builders Inc.</div>
+      <h1>Building to the Highest Standard.</h1>
+      <p class="sub">A third-generation, family-owned design-build general contractor serving commercial, industrial, and institutional clients across New England.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="tel:+14135360021">Call (413) 536-0021</a>
+        <a class="btn btn-ghost" href="mailto:abuilders@abuilders.com">Email Us</a>
+      </div>
+    </div>
+    <div class="hero-photo" role="img" aria-label="Associated Builders project under construction"></div>
+  </section>
+
+  <div class="strip">
+    <span>Third-Generation, Family-Owned</span>
+    <span class="dot">&#8226;</span>
+    <span>Five Decades of Trust</span>
+    <span class="dot">&#8226;</span>
+    <span>Design-Build, Concept to Occupancy</span>
+    <span class="dot">&#8226;</span>
+    <span>Serving New England</span>
+  </div>
+
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <p class="addr">4 Industrial Drive, South Hadley, MA 01075</p>
+    <p>Monday &ndash; Friday, 9:00 AM &ndash; 4:00 PM</p>
+    <p style="margin-bottom:2.2rem;">abuilders@abuilders.com</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="tel:+14135360021">Call (413) 536-0021</a>
+      <a class="btn btn-ghost" href="mailto:abuilders@abuilders.com">Send an Email</a>
+    </div>
+  </section>
+
+  <footer>
+    Preview built for Associated Builders Inc. from information on their existing site &mdash; not affiliated with or endorsed by them.
+  </footer>
+
+</body>
+</html>
